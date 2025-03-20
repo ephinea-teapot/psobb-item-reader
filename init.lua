@@ -434,6 +434,7 @@ local function PrependMultifloorStringToItem(item)
         -- Check if we can use
         local canUseString = (pso.require_version ~= nil and pso.require_version(3, 6, 0))
         local str = options.floor.OtherFloorsPrependString
+        str = string.format("%d", item.floorNumber) -- 同フロアではない場合、階数を表示する
         if canUseString or string.match(str, "%%") == nil then
             -- Either plugin supports the string as-is or the string is sanitized already
             TextCWrapper(false, lib_items_cfg.white, "%s ", str)
