@@ -23,7 +23,7 @@ return
         HideWhenMenuUnavailable = true,
         Anchor = 4,
         X = 50,
-        Y = 50,
+        Y = 2,
         W = 450,
         H = 400,
         NoTitleBar = "",
